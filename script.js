@@ -32,7 +32,6 @@ document.getElementById("guessbutton").addEventListener("click", function() {
     } else {
         document.getElementById("result").innerHTML = "Больше!";
     }
-    document.getElementById("guessinput").value = "";
 });
 
 
