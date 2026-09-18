@@ -1,39 +1,71 @@
-alert("Привет!");
-let button = document.getElementById("myButton");
-let themebutton = document.getElementById("themebutton");
-themebutton.addEventListener("click", function() {
-    document.body.classList.toggle("darkmode");
-});
-document.getElementById("myButton").addEventListener("click", function() {
-let text = document.getElementById("nameinput").value;
-if (text !== "") {
-    alert("Привет, " + text + "!");
-} else {
-if (text ==="") {
-    alert("Ты ничего не написал!");
-}
-}
-});
-for (let a = 10; a >=1; a--) {
-    document.getElementById("output").innerHTML += a + " ";
-};
-for (let a = 1; a <= 10; a++) {
-    if (a % 2 === 0) {
-        console.log(a + " - чётное");
-    }
-}
-document.getElementById("guessbutton").addEventListener("click", function() {
-    let secretnumber = Math.floor(Math.random() * 10) +1;
-    let number = Number(document.getElementById("guessnumber").value);
-    if (number === secretnumber) {
-        document.getElementById("result").innerHTML = "Угадал!";
-    } else if (number > secretnumber) {
-        document.getElementById("result").innerHTML = "Меньше!";
-    } else {
-        document.getElementById("result").innerHTML = "Больше!";
-    }
-    document.getElementById("guessnumber").value = "";
-});
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+    <h1>Заголовок</h1>
+    <h2>Подзаголовок</h2>
+    <h3>Текст</h3>
+    </div>
+    <header>
+        <h1 class="title">Название сайта</h1>
+        <nav>Меню</nav>
+    </header>
+    <p>Основной текст страницы</p>
+    <div>
+        <p id="words"><span class="title">Параграф который я выделю</span> тегом span</p>
+    </div>
+    <input id="nameinput" type="text" placeholder="Введи имя">
+    <div class="button">
+        <button id="myButton">Отправить</button>
+    </div>
+    <form>
+        <p>Выбери свои увлечения</p>
+        <div>
+        <input type="checkbox" id="games" name="hobby">
+        <label for="games">Игры</label>
+        </div>
+        <div>
+        <input type="checkbox" id="sport" name="hobby">
+        <label for="sport">Спорт</label>
+        </div>
+        <div>
+        <input type="checkbox" id="music" name="hobby">
+        <label for="music">Музыка</label>
+        </div>
+    </form>
+    <a href="https://google.com">Перейти в гугл</a>
+    <br>
+    <a href="https://google.com" target="_blank">Перейти в гугл в новой вкладке</a>
+    <br>
+    <a href="#footer">Вниз страницы</a>
+    <br>
+    <img src="https://zooclub.ru/attach/68000/68698.jpg" alt="кот" width="200px">
+    <footer id="footer">
+    <p class="title">Параграф</p>
+    <p id="output"></p>
+    </footer>
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Возраст</th>
+        </tr>
+        <tr>
+            <td>Антон</td>
+            <td>26</td>
+        </tr>
+    </table>
+    <br>
+    <button id="themebutton">Сменяить гамму</button>
+    <p id="output"></p>
+    <input id="guessnumber" type="number">
+    <button id="guessbutton">Проверить</button>
+    <p id="result"></p>
+    <script src="script.js"></script> 
+    </body>
+</html>
